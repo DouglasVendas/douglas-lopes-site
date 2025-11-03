@@ -1,90 +1,99 @@
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+document.documentElement.classList.add('has-js');
+
+const navToggle = document.querySelector('.nav__toggle');
+const navLinks = document.querySelector('.nav__links');
+const nav = document.querySelector('nav');
+
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('is-open');
+        navLinks.classList.toggle('nav__links--open');
     });
 
-    // Mobile menu toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    mobileMenuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Close mobile menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.nav__links a').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+            navToggle.classList.remove('is-open');
+            navLinks.classList.remove('nav__links--open');
         });
     });
+}
 
-    // Sticky navigation on scroll
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', event => {
+        const targetId = anchor.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+            event.preventDefault();
+            const offset = nav ? nav.offsetHeight : 0;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset + 10;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         }
     });
+});
 
-    // Quotes slider
-    const quotes = document.querySelectorAll('.quote');
-    const dots = document.querySelectorAll('.dot');
-    let currentQuote = 0;
+if (nav) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+            nav.classList.add('nav--scrolled');
+        } else {
+            nav.classList.remove('nav--scrolled');
+        }
+    });
+}
 
-    function showQuote(index) {
-        quotes.forEach((quote, i) => {
-            quote.classList.remove('active');
-            dots[i].classList.remove('active');
-            if (i === index) {
-                quote.classList.add('active');
-                dots[i].classList.add('active');
-            }
-        });
-    }
+const testimonials = document.querySelectorAll('.testimonial');
+const dots = document.querySelectorAll('.dot');
+const revealElements = document.querySelectorAll('.section, .manifesto__card, .timeline__item, .method__card, .case, .masterclass__container, .testimonial, .contact__link');
+let current = 0;
 
-    dots.forEach((dot, index) => {
+function showTestimonial(index) {
+    testimonials.forEach((testimonial, idx) => {
+        testimonial.classList.toggle('active', idx === index);
+        if (dots[idx]) {
+            dots[idx].classList.toggle('active', idx === index);
+        }
+    });
+}
+
+if (testimonials.length && dots.length) {
+    dots.forEach(dot => {
         dot.addEventListener('click', () => {
-            currentQuote = index;
-            showQuote(currentQuote);
+            current = Number(dot.dataset.index);
+            showTestimonial(current);
+            resetInterval();
         });
     });
 
-    // Auto-advance quotes
-    setInterval(() => {
-        currentQuote = (currentQuote + 1) % quotes.length;
-        showQuote(currentQuote);
-    }, 8000); // Change quote every 8 seconds
+    let sliderInterval = setInterval(() => {
+        current = (current + 1) % testimonials.length;
+        showTestimonial(current);
+    }, 9000);
 
-    // Intersection Observer for fade-in animation
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+    function resetInterval() {
+        clearInterval(sliderInterval);
+        sliderInterval = setInterval(() => {
+            current = (current + 1) % testimonials.length;
+            showTestimonial(current);
+        }, 9000);
+    }
+}
 
-    const observer = new IntersectionObserver((entries, observer) => {
+showTestimonial(current);
+
+if ('IntersectionObserver' in window && revealElements.length) {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.15 });
 
-    // Observe all animated elements
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
-
-
+    revealElements.forEach(element => observer.observe(element));
+} else if (revealElements.length) {
+    revealElements.forEach(element => element.classList.add('is-visible'));
+}
