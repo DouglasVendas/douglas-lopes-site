@@ -3,180 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Douglas Lopes | Vender não é sobre técnica. É sobre identidade.</title>
+    <title>Douglas Lopes | Identidade que Converte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">DL</div>
-            <ul class="nav-links">
+    <div class="background-canvas">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <a class="brand" href="#home">Douglas Lopes</a>
+            <button class="mobile-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#journey">Jornada</a></li>
-                <li><a href="#philosophy">Filosofia</a></li>
+                <li><a href="#philosophy">Manifesto</a></li>
                 <li><a href="#impact">Impacto</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Vender não é sobre técnica.<br><span>É sobre identidade.</span></h1>
-            <p class="subtitle">
-                Meu nome é Douglas Lopes e minha missão é libertar o seu potencial, 
-                transformando suas travas em pontes para uma vida de propósito e abundância. 
-                Descubra como a sua história pode se tornar sua maior ferramenta de vendas.
-            </p>
-            <a href="#journey" class="cta-button">CONHEÇA MINHA JORNADA</a>
-        </div>
-        <div class="scroll-indicator">▼</div>
-    </section>
-
-    <!-- Journey Section -->
-    <section class="journey" id="journey">
-        <div class="section-container">
-            <div class="journey-content">
-                <div class="journey-text fade-in">
-                    <h2>De uma infância silenciosa a uma <span>voz que liberta</span></h2>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-grid">
+                <div class="hero-text reveal">
+                    <span class="eyebrow">Mentor em vendas com identidade</span>
+                    <h1>Transforme travas em <span>histórias que vendem</span></h1>
                     <p>
-                        Cresci em um lar simples em Porto Alegre, onde o afeto não era expresso em palavras. 
-                        Esse vazio me ensinou a ler as pessoas e a entender suas dores mais profundas, 
-                        uma habilidade que, anos mais tarde, se tornaria o pilar do meu trabalho.
+                        A sua narrativa é a ponte entre quem você é e quem você quer alcançar. Vamos construir uma presença
+                        comercial autêntica, capaz de abrir portas e gerar conexões reais.
                     </p>
+                    <div class="hero-actions">
+                        <a href="#journey" class="primary-cta">Conheça a jornada</a>
+                        <a href="#contact" class="secondary-cta">Agende uma conversa</a>
+                    </div>
+                    <div class="hero-meta">
+                        <div>
+                            <strong>+12 anos</strong>
+                            <span>liderando times comerciais</span>
+                        </div>
+                        <div>
+                            <strong>Propósito</strong>
+                            <span>Vender como ato de cuidado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="floating-card">
+                        <h3>Identidade em ação</h3>
+                        <p>
+                            Estratégias sob medida, combinando performance e humanidade para negócios que desejam crescer
+                            com consistência.
+                        </p>
+                        <ul>
+                            <li>Mentorias individuais</li>
+                            <li>Treinamentos para equipes</li>
+                            <li>Palestras e experiências</li>
+                        </ul>
+                    </div>
+                    <div class="floating-badge">
+                        <span class="badge-number">05<span class="suffix">K</span></span>
+                        <span class="badge-label">Vidas impactadas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-cue">Role para explorar</div>
+        </section>
+
+        <section class="journey" id="journey">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Da vulnerabilidade ao palco</span>
+                <h2>Minha jornada é um convite à <span>autenticidade radical</span></h2>
+                <p>
+                    De um garoto silencioso no interior a mentor de líderes comerciais: cada capítulo reforça que vender é
+                    sobre presença, escuta e coragem para contar a própria verdade.
+                </p>
+            </div>
+            <div class="timeline">
+                <article class="timeline-item reveal">
+                    <div class="timeline-year">2009</div>
+                    <h3>Primeiro contato com vendas porta a porta</h3>
                     <p>
-                        Venci a timidez batendo de porta em porta para vender planos de internet. 
-                        Ali, descobri que a verdadeira conexão não nasce de um script, mas da escuta genuína. 
-                        Essa jornada me levou a liderar equipes comerciais, gerar milhões em vendas e a 
-                        entender uma verdade fundamental: técnica sem identidade é como dar uma espada 
-                        a alguém com os olhos vendados.
+                        Ao invés de scripts prontos, escolhi ouvir histórias. Descobri que as pessoas compram quando se
+                        sentem vistas e respeitadas.
                     </p>
+                </article>
+                <article class="timeline-item reveal">
+                    <div class="timeline-year">2014</div>
+                    <h3>Liderança de times comerciais</h3>
                     <p>
-                        Hoje, minha trajetória não é apenas sobre números. É sobre mostrar a homens e 
-                        mulheres que eles podem ir além do que imaginam, que a vulnerabilidade é força 
-                        e que a autenticidade é a chave para o sucesso. Minha voz, antes silenciada, 
-                        agora ecoa para libertar outras vozes.
+                        Desenvolvi líderes e equipes guiados por propósito. Criamos processos que valorizam tanto o cliente
+                        quanto o vendedor.
+                    </p>
+                </article>
+                <article class="timeline-item reveal">
+                    <div class="timeline-year">2021</div>
+                    <h3>Mentoria e experiências imersivas</h3>
+                    <p>
+                        Estruturei programas que unem identidade, performance e cuidado emocional para desbloquear novos
+                        patamares de resultados.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="philosophy" id="philosophy">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Manifesto</span>
+                <h2>Vender é um ato de <span>responsabilidade afetiva</span></h2>
+                <p>
+                    Não há técnica que substitua a sua verdade. Cada encontro precisa ser uma troca justa: ganha o cliente,
+                    ganha o negócio, ganha o mundo.
+                </p>
+            </div>
+            <div class="principles">
+                <article class="principle-card reveal">
+                    <div class="icon-circle">🧭</div>
+                    <h3>Identidade guiando estratégia</h3>
+                    <p>
+                        A história pessoal direciona decisões, cria confiança e posiciona a marca de forma memorável.
+                    </p>
+                </article>
+                <article class="principle-card reveal">
+                    <div class="icon-circle">🤲</div>
+                    <h3>Empatia como metodologia</h3>
+                    <p>
+                        Escuta ativa, respeito e responsabilidade emocional sustentam cada negociação bem sucedida.
+                    </p>
+                </article>
+                <article class="principle-card reveal">
+                    <div class="icon-circle">🚀</div>
+                    <h3>Performance com propósito</h3>
+                    <p>
+                        Resultados consistentes nascem de processos humanizados, métricas claras e rituais de evolução.
+                    </p>
+                </article>
+                <article class="principle-card reveal">
+                    <div class="icon-circle">🌱</div>
+                    <h3>Crescimento contínuo</h3>
+                    <p>
+                        Mentorias, práticas e estudos para manter equipes em expansão, alinhadas à visão de futuro.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="impact" id="impact">
+            <div class="impact-wrapper">
+                <div class="impact-intro reveal">
+                    <span class="eyebrow">Impacto real</span>
+                    <h2>Resultados que honram histórias</h2>
+                    <p>
+                        Projetos co-criados com empresas e profissionais que decidiram vender com integridade, liberdade e
+                        alta performance.
                     </p>
                 </div>
-                <div class="journey-image fade-in">
-                    <!-- Imagem da jornada aqui -->
+                <div class="impact-grid">
+                    <div class="impact-card reveal">
+                        <span class="impact-number">R$ 5,2 mi</span>
+                        <p>Em receita incremental gerada para parceiros e clientes mentorados.</p>
+                    </div>
+                    <div class="impact-card reveal">
+                        <span class="impact-number">+70</span>
+                        <p>Profissionais acompanhados com planos estratégicos personalizados.</p>
+                    </div>
+                    <div class="impact-card reveal">
+                        <span class="impact-number">92%</span>
+                        <p>Média de satisfação dos participantes nas experiências ao vivo.</p>
+                    </div>
+                    <div class="impact-card reveal">
+                        <span class="impact-number">360º</span>
+                        <p>Visão integrada de processos, cultura e pessoas para sustentar crescimento.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Philosophy Section -->
-    <section class="philosophy" id="philosophy">
-        <div class="section-container">
-            <h2>Minha <span>Filosofia</span></h2>
-            <p class="philosophy-subtitle">Vender é um ato de amor, não de manipulação.</p>
-            <div class="philosophy-grid">
-                <div class="philosophy-card fade-in">
-                    <div class="philosophy-icon">💡</div>
-                    <h3>Autenticidade</h3>
-                    <p>Acredito que a sua história e quem você realmente é, são suas maiores ferramentas de venda. Não há script que supere a verdade.</p>
+        <section class="quotes" aria-label="Depoimentos">
+            <div class="section-heading reveal">
+                <span class="eyebrow">O que dizem</span>
+                <h2>Uma rede de confiança <span>em expansão</span></h2>
+            </div>
+            <div class="quotes-shell">
+                <div class="quote active reveal">
+                    “Douglas me ensinou a sustentar conversas complexas com cuidado. Hoje lidero meu time com muito mais
+                    segurança.”
+                    <span class="quote-author">— Marina Alves, Diretora Comercial</span>
                 </div>
-                <div class="philosophy-card fade-in">
-                    <div class="philosophy-icon">🤝</div>
-                    <h3>Conexão Genuína</h3>
-                    <p>Vendas são relacionamentos. Construir pontes, ouvir ativamente e entender as necessidades do outro são fundamentais.</p>
+                <div class="quote reveal">
+                    “Transformamos nosso discurso de vendas e aumentamos a receita em 40% mantendo a integridade do nosso
+                    propósito.”
+                    <span class="quote-author">— Thiago Ribeiro, CEO da BeYou</span>
                 </div>
-                <div class="philosophy-card fade-in">
-                    <div class="philosophy-icon">🌱</div>
-                    <h3>Crescimento Contínuo</h3>
-                    <p>O aprendizado nunca para. Estou sempre buscando novas formas de aprimorar e compartilhar conhecimento.</p>
+                <div class="quote reveal">
+                    “Ele cria ambientes seguros para que a equipe se escute. Crescemos em números e em humanidade.”
+                    <span class="quote-author">— Camila Santos, Head de Pessoas</span>
                 </div>
-                <div class="philosophy-card fade-in">
-                    <div class="philosophy-icon">🚀</div>
-                    <h3>Impacto Real</h3>
-                    <p>Minha missão é transformar vidas, capacitando indivíduos a alcançar seu potencial máximo e gerar resultados significativos.</p>
+                <div class="quote-nav">
+                    <button class="quote-dot active" data-quote="0" aria-label="Depoimento 1"></button>
+                    <button class="quote-dot" data-quote="1" aria-label="Depoimento 2"></button>
+                    <button class="quote-dot" data-quote="2" aria-label="Depoimento 3"></button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Impact Section -->
-    <section class="impact" id="impact">
-        <div class="section-container">
-            <h2>O <span>Impacto</span> que Gero</h2>
-            <div class="impact-grid">
-                <div class="impact-card fade-in">
-                    <h3>+R$5 Milhões</h3>
-                    <h4>Em vendas geradas</h4>
-                    <p>Liderança e atuação direta em equipes comerciais que alcançaram resultados expressivos no mercado.</p>
+        <section class="contact" id="contact">
+            <div class="contact-card reveal">
+                <div class="contact-intro">
+                    <span class="eyebrow">Pronto para destravar seu próximo capítulo?</span>
+                    <h2>Vamos desenhar uma experiência feita para você</h2>
+                    <p>
+                        Conecte-se comigo pelos canais abaixo e começamos uma conversa franca sobre seus desafios e metas.
+                    </p>
                 </div>
-                <div class="impact-card fade-in">
-                    <h3>+50</h3>
-                    <h4>Profissionais treinados</h4>
-                    <p>Capacitação de vendedores e líderes para desenvolverem suas habilidades e superarem metas.</p>
-                </div>
-                <div class="impact-card fade-in">
-                    <h3>Transformação</h3>
-                    <h4>De mentalidades</h4>
-                    <p>Ajudo a quebrar paradigmas e a construir uma nova visão sobre vendas com propósito.</p>
+                <div class="contact-links">
+                    <a href="#" class="contact-link">
+                        <span class="link-title">LinkedIn</span>
+                        <span class="link-meta">Conteúdo e reflexões semanais</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <span class="link-title">Instagram</span>
+                        <span class="link-meta">Bastidores, histórias e convites</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <span class="link-title">WhatsApp</span>
+                        <span class="link-meta">Mensagens diretas e propostas</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Quotes Section -->
-    <section class="quotes">
-        <div class="section-container">
-            <h2>O que dizem sobre <span>Douglas Lopes</span></h2>
-            <div class="quotes-slider">
-                <div class="quote active fade-in">
-                    "Douglas me ajudou a enxergar que a venda é um processo de autoconhecimento. Meus resultados triplicaram!"
-                </div>
-                <div class="quote fade-in">
-                    "A forma como Douglas aborda a identidade nas vendas é revolucionária. Saí das palestras com uma nova perspectiva."
-                </div>
-                <div class="quote fade-in">
-                    "Um mentor inspirador que realmente se importa com o seu desenvolvimento. Recomendo a todos que buscam ir além."
-                </div>
-            </div>
-            <div class="quote-dots">
-                <span class="dot active" data-quote="0"></span>
-                <span class="dot" data-quote="1"></span>
-                <span class="dot" data-quote="2"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-container">
-            <h2>Vamos <span>Conectar?</span></h2>
-            <p>Estou pronto para te ajudar a transformar sua identidade em sua maior ferramenta de vendas.</p>
-            <div class="social-links">
-                <a href="#" target="_blank">
-                    <img src="https://img.icons8.com/ios-filled/50/d4af37/linkedin.png" alt="LinkedIn" width="24" height="24">
-                    LinkedIn
-                </a>
-                <a href="#" target="_blank">
-                    <img src="https://img.icons8.com/ios-filled/50/d4af37/instagram-new.png" alt="Instagram" width="24" height="24">
-                    Instagram
-                </a>
-                <a href="#" target="_blank">
-                    <img src="https://img.icons8.com/ios-filled/50/d4af37/whatsapp.png" alt="WhatsApp" width="24" height="24">
-                    WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Douglas Lopes. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <p>&copy; 2025 Douglas Lopes. Identidade que inspira resultados.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
